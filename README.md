@@ -55,3 +55,21 @@ As a user, I can:
 - Attach a submit event listener to the `add-to-cart-form` form using a function called `addToCart`. After the submission, add the value from the input field to the burger displayed in the `div#food-detail`. **No persistence is needed**. The number in cart should be _cumulative_. For example, if a burger currently has 7 for the number in cart, and a user add another 7 to the number in cart via the form, the number in cart displayed for the burger should increase to 14.
 
 ** Attention here **: Your program should have a main() function that invokes `addBurgerNamesToMenu` and `addToCart` after the DOM has fully loaded and start the program logic.
+
+## Advanced Deliverables
+
+These deliverables are not required to complete this lab, but if you have
+the extra time, or even after finishing the Core Deliverables, they are a great way to
+stretch your skills.
+
+> Note: If you are going to attempt these advanced deliverables, please be sure
+> to have a working commit with all the Core Deliverables first!
+
+As a user, I can:
+
+- See the details for the first burger as soon as the page loads (without
+  clicking on an span)
+- Delete a burger name (you can add a "delete" button if you'd like, or use an
+existing element to handle the delete action). The burger name should be removed
+from the `restaurant-menu` div, and should not be displayed in the `food-detail`
+div. No need to persist.
