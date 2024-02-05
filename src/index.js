@@ -1,10 +1,7 @@
 // index.js
 
-let currentlyDisplayedBurger
-
 // Callbacks
 const displayBurgerDetails = (burger) => {
-    currentlyDisplayedBurger = burger
     const imageElement = document.getElementById('image')
     imageElement.src = burger.image
     const nameElement = document.getElementById('name')
@@ -33,35 +30,13 @@ const addBurgerNamesToMenu = () => {
         burgers.forEach(burger => {
             const spanElement = document.createElement('span')
             spanElement.textContent = burger.name
-
-            // Advanced Deliverable # 2
-            const burgerDiv = document.createElement('div')
-            const deleteButton = document.createElement('button')
-            deleteButton.textContent = "DELETE"
-            deleteButton.addEventListener('click', () => {
-                deleteButton.parentNode.remove()
-                if(currentlyDisplayedBurger.id === burger.id){
-                    const defaultData = {
-                        name: "Name Of Burger",
-                        image: "./assets/image-placeholder.jpg",
-                        number_in_cart: "[X]"
-                    }
-                    displayBurgerDetails(defaultData)
-                }
-            })
-            burgerDiv.appendChild(spanElement)
-            burgerDiv.appendChild(deleteButton)
-
-            restaurantMenuDiv.appendChild(burgerDiv)
+            restaurantMenuDiv.appendChild(spanElement)
             
             // Core Deliverable # 2
             spanElement.addEventListener('click', () => {
                 displayBurgerDetails(burger)
             })
         })
-
-        // Advanced Deliverable # 1
-        displayBurgerDetails(burgers[0])
     })
 };
 
