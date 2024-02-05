@@ -1,0 +1,34 @@
+{
+  "burgers": [
+    {
+      "id": 1,
+      "name": "Flatburger",
+      "image": "./assets/food/flatburger.jpeg",
+      "number_in_cart": 0
+    },
+    {
+      "id": 2,
+      "name": "Maple Bacon Burger",
+      "image": "./assets/food/maple-bacon-burger.jpeg",
+      "number_in_cart": 0
+    },
+    {
+      "id": 3,
+      "name": "Mushroom Burger",
+      "image": "./assets/food/mushroom-burger.webp",
+      "number_in_cart": 0
+    },
+    {
+      "id": 4,
+      "name": "Avocado Bun Burger",
+      "image": "./assets/food/avocado-bun-burger.jpeg",
+      "number_in_cart": 0
+    },
+    {
+      "id": 5,
+      "name": "Ramen Burger",
+      "image": "./assets/food/ramen-burger.jpeg",
+      "number_in_cart": 0
+    }
+  ]
+}
