@@ -26,15 +26,6 @@ Use this image as an example of how the app should look once it is complete.
 - Run `live-server` to start the frontend in browser
 - Write your code in the `index.js` file
 
-Test your server by visiting this route in the browser:
-
-[http://localhost:3000/burgers](http://localhost:3000/burgers)
-
-Then, open the `index.html` file on your browser to run the application.
-
-Write your code in the `src/index.js` file. The base URL for your API will be
-[http://localhost:3000](http://localhost:3000).
-
 ## Endpoints
 
 Your base URL for your API will be: `http://localhost:3000`
