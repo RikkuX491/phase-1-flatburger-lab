@@ -18,8 +18,9 @@ const addToCart = () => {
         event.preventDefault()
 
         const numberInCartCountElement = document.getElementById('number-in-cart-count')
-        const numberToAddElement = document.getElementById('number-to-add')
-        numberInCartCountElement.textContent = Number(numberInCartCountElement.textContent) + Number(numberToAddElement.value)
+        const numberToAddInputElement = document.getElementById('number-to-add')
+        
+        numberInCartCountElement.textContent = Number(numberToAddInputElement.value) + Number(numberInCartCountElement.textContent)
     })
 }
 
@@ -32,13 +33,26 @@ const addBurgerNamesToMenu = () => {
         burgers.forEach(burger => {
             const spanElement = document.createElement('span')
             spanElement.textContent = burger.name
-            restaurantMenu.appendChild(spanElement)
+
+            // Advanced Deliverable # 2
+            const divElement = document.createElement('div')
+            const deleteButton = document.createElement('button')
+            deleteButton.textContent = "DELETE"
+            deleteButton.addEventListener('click', () => {
+                divElement.remove()
+            })
+            divElement.appendChild(spanElement)
+            divElement.appendChild(deleteButton)
+            restaurantMenu.appendChild(divElement)
 
             // Deliverable # 2 solution code
             spanElement.addEventListener('click', () => {
                 displayBurgerDetails(burger)
             })
         })
+
+        // Advanced Deliverable # 1
+        displayBurgerDetails(burgers[0])
     })
 };
 
