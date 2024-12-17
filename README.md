@@ -13,7 +13,7 @@ and building out the frontend for our app.
 
 > To view in VSCode, right click on the README.md file and select "Open Preview".
 
-## Demo
+## Demo Image
 
 Use this image as an example of how the app should look once it is complete.
 
