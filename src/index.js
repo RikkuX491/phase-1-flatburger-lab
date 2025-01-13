@@ -1,6 +1,7 @@
 // index.js
 
 // Callbacks
+// Deliverable # 2 solution code
 const displayBurgerDetails = (burger) => {
     const detailImageElement = document.getElementById('image')
     detailImageElement.src = burger.image
@@ -10,6 +11,7 @@ const displayBurgerDetails = (burger) => {
     numberInCart.textContent = burger.number_in_cart
 };
 
+// Deliverable # 3 solution code
 const addToCart = () => {
     const addToCartForm = document.getElementById('add-to-cart-form')
     addToCartForm.addEventListener('submit', (event) => {
@@ -22,6 +24,7 @@ const addToCart = () => {
     })
 }
 
+// Deliverable # 1 solution code
 const addBurgerNamesToMenu = () => {
     fetch('http://localhost:3000/burgers')
     .then(response => response.json())
@@ -40,6 +43,7 @@ const addBurgerNamesToMenu = () => {
 };
 
 const main = () => {
+    // Deliverable # 1 & 3 solution code
     document.addEventListener('DOMContentLoaded', () => {
         addBurgerNamesToMenu()
         addToCart()
