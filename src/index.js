@@ -30,14 +30,15 @@ const addBurgerNamesToMenu = () => {
     .then(response => response.json())
     .then(burgers => {
         burgers.forEach(burger => {
-            const divElement = document.createElement('div')
-
             const span = document.createElement('span')
             span.textContent = burger.name
             span.addEventListener('click', () => {
                 displayBurgerDetails(burger)
             })
 
+            // Advanced Deliverable # 2 solution code
+            const divElement = document.createElement('div')
+            
             const deleteButton = document.createElement('button')
             deleteButton.textContent = 'X'
             deleteButton.addEventListener('click', () => {
