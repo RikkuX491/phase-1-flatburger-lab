@@ -30,15 +30,29 @@ const addBurgerNamesToMenu = () => {
     .then(response => response.json())
     .then(burgers => {
         burgers.forEach(burger => {
+            const divElement = document.createElement('div')
+
             const span = document.createElement('span')
             span.textContent = burger.name
-            const restaurantMenu = document.querySelector('#restaurant-menu')
-            restaurantMenu.appendChild(span)
-
             span.addEventListener('click', () => {
                 displayBurgerDetails(burger)
             })
+
+            const deleteButton = document.createElement('button')
+            deleteButton.textContent = 'X'
+            deleteButton.addEventListener('click', () => {
+                divElement.remove()
+            })
+
+            divElement.appendChild(span)
+            divElement.appendChild(deleteButton)
+
+            const restaurantMenu = document.querySelector('#restaurant-menu')
+            restaurantMenu.appendChild(divElement)
         })
+
+        // Advanced Deliverable # 1 solution code
+        displayBurgerDetails(burgers[0])
     })
 };
 
